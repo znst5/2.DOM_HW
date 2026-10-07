@@ -1,0 +1,30 @@
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(4, 120px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 500px;
+}
+
+.cell {
+    background-color: #2ecc71;
+    border: 2px solid #27ae60;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    height: 120px;
+    width: 120px;
+}
+
+.character {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+
+/*# sourceMappingURL=main.32ba48c05256560dee64.css.map*/
