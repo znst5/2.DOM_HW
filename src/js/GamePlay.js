@@ -14,7 +14,7 @@ export class GamePlay {
     for (let i = 0; i < totalCells; i++) {
       const cell = document.createElement('div');
       cell.classList.add('cell');
-      this.container.appendChild(cell);
+      this.container.append(cell);
       this.cells.push(cell);
     }
 
@@ -34,13 +34,20 @@ export class GamePlay {
 
   moveCharacter() {
     const newIndex = this.generateNewIndex();
-    this.cells[newIndex].appendChild(this.character);
-    this.currentCellIndex - newIndex;
+    this.cells[newIndex].append(this.character);
+    this.currentCellIndex = newIndex;
   }
 
   init() {
     this.drawUi();
     this.moveCharacter();
     this.intervalId = setInterval(() => this.moveCharacter(), 1000);
+  }
+
+  destroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
   }
 }
