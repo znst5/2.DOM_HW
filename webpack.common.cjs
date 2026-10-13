@@ -1,8 +1,8 @@
 const path = require('path');
-const HtmlWebpckplugin = require('html-webpack-plugin');
+const HtmlWebpackplugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-module.export = {
+module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
